@@ -1,9 +1,8 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const discord = require('discord.js');
+const bot = new discord.Client();
 
-client.login('NjQwNjgwNDAyNTgzMDI3NzEz.Xb9aBw.zlWM2mYuAEuXDzpcCm8QgoHRu_4')
-
-client.on('ready', ()=>{
-    console.log('Bot on!');
+bot.on('ready', () =>{
+    console.log('Online!')
 })
 
+bot.login(process.env.token)
