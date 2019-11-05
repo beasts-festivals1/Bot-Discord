@@ -37,17 +37,11 @@ bot.on('message', message => {
     if(message.content.startsWith('$enableoffline')){
         bot.user.setStatus('invisible');
         message.channel.send('Fake offline enabled!')
-    }else{
-        bot.user.setStatus('dnd');
-        message.channel.send('Error whilst enabling fake offline please contact a bot administrator to fix this issue!')
     }
 
     if(message.content.startsWith('disableoffline')){
         bot.user.setStatus('dnd');
         message.channel.send('Fake offline disabled!')
-    }else {
-        bot.user.setStatus('invisible')
-        message.channel.send('Error whilst disabling fake offline please contact a bot administrator to fix this issue!')
     }
 })
 
