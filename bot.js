@@ -18,7 +18,7 @@ bot.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    if(message.content.toLowerCase('$help')){
+    if(message.content.startsWith('$help')){
         const helpembed = new discord.RichEmbed()  
         helpembed.setTitle('Help Page!')
         helpembed.addField('$hamachi', 'Displays the Hamachi Network Name and Password');
@@ -34,7 +34,7 @@ bot.on('message', message => {
         message.channel.send(helpembed)
     }
 
-    if(message.content.toLowerCase('$enableoffline')){
+    if(message.content.startsWith('$enableoffline')){
         bot.user.setStatus('invisible');
         message.channel.send('Fake offline enabled!')
     }else{
@@ -42,7 +42,7 @@ bot.on('message', message => {
         message.channel.send('Error whilst enabling fake offline please contact a bot administrator to fix this issue!')
     }
 
-    if(message.content.toLowerCase('disableoffline')){
+    if(message.content.startsWith('disableoffline')){
         bot.user.setStatus('dnd');
         message.channel.send('Fake offline disabled!')
     }else {
