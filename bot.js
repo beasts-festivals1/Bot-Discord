@@ -16,7 +16,7 @@ bot.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    if(message.content.startsWith('$help')){
+    if(message.content.toLowerCase('$help')){
         const helpembed = new discord.RichEmbed()  
         helpembed.setTitle('Help Page!')
         helpembed.addField('$hamachi', 'Displays the Hamachi Network Name and Password');
