@@ -8,6 +8,8 @@ const PREFIX = '$'
 
 bot.on('ready', () =>{
     console.log('Online!')
+    bot.user.setActivity('Minor Citizens | $help')
+    bot.user.setStatus('dnd')
 })
 
 var servers = {};
