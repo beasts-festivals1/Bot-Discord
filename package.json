@@ -1,0 +1,23 @@
+{
+  "name": "minorcitizensbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start" : "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beasts-festivals1/Minor-Citizens-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beasts-festivals1/Minor-Citizens-Bot/issues"
+  },
+  "homepage": "https://github.com/beasts-festivals1/Minor-Citizens-Bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
