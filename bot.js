@@ -34,16 +34,20 @@ bot.on('message', message => {
         message.channel.send(helpembed)
     }
 
-    if(message.content.toLowerCase('$fakeoffline')){
+    if(message.content.toLowerCase('$enableoffline')){
         bot.user.setStatus('invisible');
+        message.channel.send('Fake offline enabled!')
     }else{
         bot.user.setStatus('dnd');
+        message.channel.send('Error whilst enabling fake offline please contact a bot administrator to fix this issue!')
     }
 
     if(message.content.toLowerCase('disableoffline')){
         bot.user.setStatus('dnd');
+        message.channel.send('Fake offline disabled!')
     }else {
         bot.user.setStatus('invisible')
+        message.channel.send('Error whilst disabling fake offline please contact a bot administrator to fix this issue!')
     }
 })
 
