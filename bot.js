@@ -8,8 +8,8 @@ const PREFIX = '$'
 
 bot.on('ready', () =>{
     console.log('Online!')
-    bot.user.setActivity('Minor Citizens | $help')
-    bot.user.setStatus('dnd')
+    bot.user.setActivity('Minor Citizens | $help');
+    bot.user.setStatus('dnd');
 })
 
 var servers = {};
@@ -32,6 +32,18 @@ bot.on('message', message => {
         helpembed.setFooter('For staff commands type $shelp');
         helpembed.setColor(0xFFC300)
         message.channel.send(helpembed)
+    }
+
+    if(message.content.toLowerCase('$fakeoffline')){
+        bot.user.setStatus('invisible');
+    }else{
+        bot.user.setStatus('dnd');
+    }
+
+    if(message.content.toLowerCase('disableoffline')){
+        bot.user.setStatus('dnd');
+    }else {
+        bot.user.setStatus('invisible')
     }
 })
 
